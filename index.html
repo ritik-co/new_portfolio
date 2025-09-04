@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Colorful Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f3e7e9, #e3eeff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background: linear-gradient(to right, #667eea, #764ba2);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #89f7fe, #66a6ff);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff4757;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .my-photo {
+      margin: 3rem auto;
+      max-width: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+      border: 5px solid #ffd700;
+      transition: transform 0.3s ease;
+    }
+
+    .my-photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(255, 215, 0, 0.7);
+    }
+
+    .my-photo img {
+      width: 100%;
+      display: block;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .project-card h3 {
+      color: #333;
+    }
+
+    .project-card a {
+      text-decoration: none;
+      color: #667eea;
+      font-weight: 600;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">ColorFolio</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Hello, I'm <span style="color: #ffd700;">Ritik Kumar</span></h1>
+    <p>Creative Developer | Designer | Coder</p>
+    <a href="#projects"><button class="btn">Explore My Work</button></a>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I’m a web developer passionate about crafting modern, user-friendly web experiences. I specialize in HTML, CSS, JavaScript, and backend technologies like PHP and MySQL.</p>
+  </section>
+
+  <!-- New My Photo Section -->
+  <section id="photo" class="my-photo">
+    <img src="ritik.jpg" alt="My Photo" />
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="sorting.png" alt="Project 1">
+        <h3>Sorting Visualizer</h3>
+        <p>A visualization tool to learn sorting algorithms like Bubble, Merge, and Quick sort.</p>
+        <a href="https://github.com/ritik-co/Sorting_Visualizer">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <img src="print.png" alt="Project 2">
+        <h3>PDF Print Website</h3>
+        <p>Platform for uploading PDFs/DOCs and managing print jobs using FCFS logic.</p>
+        <a href="https://github.com/ritik-co/Printing_project/blob/main/print_project/dashboard.php">View on GitHub</a>
+      </div>
+       <div class="project-card">
+        <img src="e-Commers.png" alt="Project 3">
+        <h3>E-Commers Website</h3>
+        <p>Platform for Shoping.</p>
+        <a href="https://github.com/ritik-co/E-commers-web.git">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <img src="FOOD.png" alt="Project 4">
+        <h3>E-food  Website</h3>
+        <p>Platform for exploreing food items/testing grate racipies.</p>
+        <a href="https://github.com/ritik-co/Food-website.git">View on GitHub</a>
+      </div>
+       <div class="project-card">
+        <img src="amazon.png" alt="Project 5">
+        <h3>Amazone Clone</h3>
+        <p>frontend same as original amazone clone.</p>
+        <a href="https://github.com/ritik-co/amazon-clone.git">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email:ritik724995@gamil.com</p>
+    <p>LinkedIn | GitHub </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ritik Kumar. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
